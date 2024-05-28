@@ -11,4 +11,7 @@
 
     $tarefaService = new TarefaService($conexao, $tarefa);
 
+    $tarefaService->inserir();
+
+    header('Location: nova_tarefa.php?inclusao=1');
 ?>
