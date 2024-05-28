@@ -10,7 +10,7 @@
 
         public function conectar(){
             try{
-                $conexao = PDO(
+                $conexao = new PDO(
                     "mysql:host=$this->host;dbname=$this->dbname",
                     $this->user,
                     $this->pass
@@ -19,9 +19,8 @@
                 return $conexao;
 
             } catch(PDOException $e){
-                echo '<p> Ocorreu um erro:'. $e.getMessege() .'</p>';
+                echo '<p>'.$e->getMessage().'</p>';
             }
         }
     }
-
 ?>
