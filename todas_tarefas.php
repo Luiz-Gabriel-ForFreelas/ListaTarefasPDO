@@ -16,7 +16,7 @@
 			function editar(id, descricao){
 				//Criar um form
 				let form = document.createElement('form')
-				form.action = '#'
+				form.action = 'tarefa_controller.php?acao=atualizar'
 				form.method = 'POST'
 				form.className = 'row'
 
